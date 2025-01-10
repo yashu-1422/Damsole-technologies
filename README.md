@@ -52,7 +52,7 @@ Welcome to the repository documenting my work during the **Data Science Internsh
 ## 🔗 Connect  
 Feel free to explore this repository, provide feedback, or reach out for collaboration.  
 - [LinkedIn](https://www.linkedin.com/in/yash-auti-8277b032b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8ohKCBonR6KVnE87jvPFNg%3D%3D)  
-- [Email](mailto:autiy93@gmail.com)  
+- <a href="mailto:your-email@example.com">Send Email</a>
 
 ---
 
