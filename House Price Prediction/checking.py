@@ -7,9 +7,11 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import streamlit as st
 
-# Load Dataset
-data = pd.read_csv("kc_house_data.csv")
+# Direct URL to the dataset on Google Drive
+url = 'https://drive.google.com/file/d/1eg7a_pplr-41Cnc2h9QvrXJkkQSS4Hl9/view?usp=sharing'
 
+# Load the dataset from the URL
+data = pd.read_csv(url)
 # Data Preprocessing
 data.ffill(inplace=True)  # Handle missing values
 
