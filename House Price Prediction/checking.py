@@ -52,11 +52,7 @@ st.sidebar.title("Input Features")
 area = st.sidebar.number_input("Enter Area (sqft):", value=2000, step=100)
 bedrooms = st.sidebar.number_input("Enter Number of Bedrooms:", value=3, step=1)
 bathrooms = st.sidebar.number_input("Enter Number of Bathrooms:", value=2, step=1)
-condition = st.sidebar.number_input("Enter Number of Condition:", value=3, step=1)
-floors = st.sidebar.number_input("Enter Number of Floors:", value=2, step=1)
-sqft_above = st.sidebar.number_input("Enter Number of sqft_above:", value=2, step=1)
-sqft_basement = st.sidebar.number_input("Enter Number of sqft_basement:", value=0, step=1)
-sqft_lot = st.sidebar.number_input("Enter Number of sqft_lot:", value=5000, step=1)
+
 
 
 # Predict Button
