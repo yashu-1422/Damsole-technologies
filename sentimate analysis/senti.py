@@ -1,11 +1,29 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
 import re
 import string
 import joblib
+import gdown
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report
+
+# Google Drive link
+file_id = '1DYHp9NFq0sAFOiKE5Xm5BaHoAlS2Qfp8'
+download_url = f'https://drive.google.com/uc?id={file_id}'
+
+# Function to download the dataset if not already downloaded
+def download_dataset(url, output_path='IMDB_Dataset.csv'):
+    if not os.path.exists(output_path):
+        st.write("Downloading dataset...")
+        gdown.download(url, output_path, quiet=False)
+    else:
+        st.write(f"Dataset already exists at {output_path}. Skipping download.")
+    return output_path
+
+# Download the dataset
+dataset_path = download_dataset(download_url)
 
 # Load pre-trained models and vectorizer
 models = {
@@ -57,3 +75,6 @@ if st.button('Predict Sentiment'):
             st.write(f"{model_name}: {sentiment}")
     else:
         st.warning("Please enter a movie review to get the prediction.")
+
+# Optionally display dataset download status
+st.write(f"Dataset available at: {dataset_path}")
